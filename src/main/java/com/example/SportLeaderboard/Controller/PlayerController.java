@@ -35,11 +35,7 @@ public class PlayerController {
         return playerList;
     }
 
-    //    @RequestMapping(value = "deletePlayerById",method = RequestMethod.GET)             //delete Player
-//    public void deletePlayerById(@RequestParam String password) {
-//
-//        playerService.deleteTeamById(password);
-//    }
+
     @RequestMapping(value = "updatePlayer")
     public void updatePlayer() throws ParseException {
         playerService.updatePlayer();

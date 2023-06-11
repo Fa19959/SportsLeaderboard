@@ -30,6 +30,7 @@ public class RegistrationResponse {
                 .sportType(requestFromRegistration.getSportType())
                 .build();
     }
+
     public static List<RegistrationResponse> convertRequestListToResponseList(List<Registration> RegistrationRequestFromUser) {
         List<RegistrationResponse> RegistrationResponseList = new ArrayList<>();
         if (!RegistrationRequestFromUser.isEmpty()) {

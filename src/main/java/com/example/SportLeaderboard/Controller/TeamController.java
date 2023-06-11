@@ -19,7 +19,7 @@ public class TeamController {
         teamService.createTeam();
     }
 
-    @RequestMapping( value = "getTeamById", method = RequestMethod.GET)
+    @RequestMapping(value = "getTeamById", method = RequestMethod.GET)
     public Team getTeamById(@RequestParam Integer id) {
         Team teamById = teamService.getTeamById(id);
         return teamById;

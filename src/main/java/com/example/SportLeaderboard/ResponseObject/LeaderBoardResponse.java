@@ -28,6 +28,7 @@ public class LeaderBoardResponse {
                 .losses(requestFromLeaderBoard.getLosses())
                 .build();
     }
+
     public static List<LeaderBoardResponse> convertRequestListToResponseList(List<LeaderBoard> LeaderBoardRequestFromUser) {
         List<LeaderBoardResponse> LeaderBoardResponseList = new ArrayList<>();
         if (!LeaderBoardRequestFromUser.isEmpty()) {

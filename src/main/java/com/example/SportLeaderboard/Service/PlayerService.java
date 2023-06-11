@@ -30,24 +30,24 @@ public class PlayerService {
 
     }
 
-//    public Integer getPlayerByNames(String username) {
+    //    public Integer getPlayerByNames(String username) {
 //        return playerRepository.getPlayerByName(username);
 //
 //    }
-    public List<Player> getAllPlayers(){                              //get all player
+    public List<Player> getAllPlayers() {                              //get all player
 
         return playerRepository.getAllPlayer();
     }
 
-//    public void deleteTeamById(String password){                     // Delete by id
+    //    public void deleteTeamById(String password){                     // Delete by id
 //        Player player=playerRepository.getPlayerID(password);
 //        player.setIsActive(false);
 //        playerRepository.save(player);
 //
 //    }
-    public void updatePlayer (){                //Update Player
+    public void updatePlayer() {                //Update Player
 
-        Player player=new Player();
+        Player player = new Player();
         player.setPlayerId(1);
         player.setTeamName("All for one");
         player.setSport("football");
@@ -57,8 +57,9 @@ public class PlayerService {
         playerRepository.save(player);
 
     }
-    public Player getPlayerById(Integer id){                         //get player by id
-        Player player=playerRepository.getPlayerId(id);
+
+    public Player getPlayerById(Integer id) {                         //get player by id
+        Player player = playerRepository.getPlayerId(id);
         return player;
 
     }

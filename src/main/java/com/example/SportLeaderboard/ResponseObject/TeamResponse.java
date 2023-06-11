@@ -28,6 +28,7 @@ public class TeamResponse {
                 .registration(requestFromTeam.getRegistration())
                 .build();
     }
+
     public static List<TeamResponse> convertRequestListToResponseList(List<Team> TeamRequestFromUser) {
         List<TeamResponse> TeamResponseList = new ArrayList<>();
         if (!TeamRequestFromUser.isEmpty()) {

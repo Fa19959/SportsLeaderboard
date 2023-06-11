@@ -16,7 +16,7 @@ public class GameService {
     @Autowired
     GameRepository gameRepository;
 
-    public void createGame(){
+    public void createGame() {
         Game gameToCreate = new Game();
         gameToCreate.setGameDescription("This is game description");
         gameToCreate.setScoreTeam1(1);
@@ -35,7 +35,8 @@ public class GameService {
         Game game = gameRequest.convert(gameRequest);
         gameRepository.save(game);
     }
-    public Game getGameById(Integer id){
+
+    public Game getGameById(Integer id) {
         Game gameById = gameRepository.getGameById(id);
         return gameById;
 

@@ -27,6 +27,7 @@ public class PlayerResponse {
                 .sport(requestFromPlayer.getSport())
                 .build();
     }
+
     public static List<PlayerResponse> convertRequestListToResponseList(List<Player> PlayerRequestFromUser) {
         List<PlayerResponse> PlayerResponseList = new ArrayList<>();
         if (!PlayerRequestFromUser.isEmpty()) {

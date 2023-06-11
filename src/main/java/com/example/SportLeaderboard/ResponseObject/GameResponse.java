@@ -32,6 +32,7 @@ public class GameResponse {
                 .score2(requestFromGame.getScoreTeam2())
                 .build();
     }
+
     public static List<GameResponse> convertRequestListToResponseList(List<Game> GameRequestFromUser) {
         List<GameResponse> gameResponseList = new ArrayList<>();
         if (!GameRequestFromUser.isEmpty()) {

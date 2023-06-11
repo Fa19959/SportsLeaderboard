@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TeamRepository extends JpaRepository<Team,Integer> {
     @Query(value = "select t from Team t where t.id=:teamId")
-    public Team getTeamById(@Param("teamId")Integer id);
+    public Team getTeamById(@Param("teamId") Integer id);
 }

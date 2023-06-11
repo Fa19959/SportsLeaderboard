@@ -18,7 +18,8 @@ public class LeaderBoardRequest {
     String teamName;
     Integer wins;
     Integer losses;
-    public static LeaderBoard convertLeaderBoardToRequest(LeaderBoardRequest request){
+
+    public static LeaderBoard convertLeaderBoardToRequest(LeaderBoardRequest request) {
         LeaderBoard leaderBoard = new LeaderBoard();
         leaderBoard.setTeamName(request.getTeamName());
         leaderBoard.setWins(request.getWins());
@@ -28,7 +29,8 @@ public class LeaderBoardRequest {
         return leaderBoard;
 
     }
-    public static List<LeaderBoard> convertListToLeaderBoardRequest(List<LeaderBoardRequest> LeaderBoardRequestList){
+
+    public static List<LeaderBoard> convertListToLeaderBoardRequest(List<LeaderBoardRequest> LeaderBoardRequestList) {
         List<LeaderBoard> LeaderBoardList = new ArrayList<>();
         if (!LeaderBoardRequestList.isEmpty()) {
             for (LeaderBoardRequest leaderBoardRequest : LeaderBoardRequestList) {

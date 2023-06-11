@@ -1,11 +1,9 @@
 package com.example.SportLeaderboard.RequestObject;
 
-import com.example.SportLeaderboard.Models.Registration;
 import com.example.SportLeaderboard.Models.Team;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.ArrayList;
 import java.util.List;
 

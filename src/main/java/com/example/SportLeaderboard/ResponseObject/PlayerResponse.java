@@ -18,6 +18,7 @@ public class PlayerResponse {
     String Name;
     String tName;
     String sport;
+
     public static PlayerResponse covertPlayerToResponse(Player requestFromPlayer) {
         return PlayerResponse.builder()
                 .Id(requestFromPlayer.getPlayerId())

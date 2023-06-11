@@ -30,19 +30,6 @@ public class GameRequest {
 
     }
 
-//    public static Game convert(GameRequest request) {
-//
-//        Game game = new Game();
-//
-//        game.setGameDescription(request.getGameDescription());
-//        game.setTeam1(request.getCustomerPhoneNumber());
-//        customer.setCustomerEmail(request.getCustomerEmail());
-//        customer.setCustomerPaymentMethod(request.getCustomerPaymentMethod());
-//        customer.setIsActive(true);
-//        customer.setCreatedDate(new Date());
-//        return customer;
-//    }
-
     public static List<Game> convertListToGameRequest(List<GameRequest> gameRequestList) {
         List<Game> gameList = new ArrayList<>();
         if (!gameRequestList.isEmpty()) {

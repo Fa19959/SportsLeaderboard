@@ -21,7 +21,7 @@ public class LeaderBoardRequest {
     public static LeaderBoard convertLeaderBoardToRequest(LeaderBoardRequest request) {
         LeaderBoard leaderBoard = new LeaderBoard();
         leaderBoard.setTeamName(request.getTeamName());
-        leaderBoard.setWins(request.getWins());
+        leaderBoard.setTeamWins(request.getWins());
         leaderBoard.setTeamLosses(request.getLosses());
         leaderBoard.setCreateDate(new Date());
         leaderBoard.setIsActive(true);

@@ -23,7 +23,7 @@ public class LeaderBoardResponse {
         return LeaderBoardResponse.builder()
                 .Id(requestFromLeaderBoard.getLeaderBoardId())
                 .Name(requestFromLeaderBoard.getTeamName())
-                .wins(requestFromLeaderBoard.getWins())
+                .wins(requestFromLeaderBoard.getTeamWins())
                 .losses(requestFromLeaderBoard.getTeamLosses())
                 .build();
     }

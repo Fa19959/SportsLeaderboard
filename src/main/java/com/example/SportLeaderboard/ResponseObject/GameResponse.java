@@ -26,7 +26,7 @@ public class GameResponse {
         return GameResponse.builder()
                 .Id(requestFromGame.getGameId())
                 .Description(requestFromGame.getGameDescription())
-               //.tRequest1(requestFromGame.)
+                //.tRequest1(requestFromGame.)
                 .score1(requestFromGame.getScoreOfTeamOne())
                 .score2(requestFromGame.getScoreOfTeamTwo())
                 .build();

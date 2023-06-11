@@ -10,11 +10,7 @@ import java.util.List;
 
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, Integer> {
-//    @Query(value = "SELECT s.id FROM Player s WHERE s.userName= :userName")
-//        //get player by name
-//    Integer getPlayerByName(@Param("userName") String userName);
-//    @Query(value = "SELECT s FROM Player s WHERE s.password= :password")
-//    Player getPlayerID(@Param("password") String password);
+   Player getPlayerID(@Param("password") String password);
     @Query(value = "SELECT s FROM Player s")
     List<Player> getAllPlayer();
 

@@ -18,12 +18,13 @@ public class Game extends BaseEntity {
     Integer gameId;
     String gameDescription;
     @OneToOne
-    @JoinColumn(name = "team1_id",referencedColumnName = "id")
-    Team team1;
+    @JoinColumn(name = "team1_id", referencedColumnName = "id")
+    Team teamOne;
     @OneToOne
-    @JoinColumn(name = "team2_id",referencedColumnName = "id")
+    @JoinColumn(name = "team2_id", referencedColumnName = "id")
     Team team2;
-    Integer scoreTeam1;
-    Integer scoreTeam2;
+
+    Integer scoreOfTeamOne;
+    Integer scoreOfTeamTwo;
 
 }

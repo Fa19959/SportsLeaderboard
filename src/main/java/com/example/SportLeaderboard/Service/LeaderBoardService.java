@@ -16,7 +16,7 @@ public class LeaderBoardService {
         LeaderBoard leaderBoard = new LeaderBoard();
         leaderBoard.setTeamName("RDF");
         leaderBoard.setWins(1);
-        leaderBoard.setLosses(0);
+        leaderBoard.setTeamLosses(0);
         leaderBoard.setCreateDate(new Date());
         leaderBoard.setIsActive(true);
         leaderBoardRepository.save(leaderBoard);

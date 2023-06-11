@@ -22,10 +22,10 @@ public class GameRequest {
     public static Game convertToGameRequest(GameRequest request) {
         Game game = new Game();
         game.setGameDescription(request.getGameDescription());
-        game.setTeam1(TeamRequest.convertToTeamRequest(request.getTeamRequest1()));
+        game.setTeamOne(TeamRequest.convertToTeamRequest(request.getTeamRequest1()));
         game.setTeam2(TeamRequest.convertToTeamRequest(request.getTeamRequest2()));
-        game.setScoreTeam1(request.getScoreTeam1());
-        game.setScoreTeam2(request.getScoreTeam2());
+        game.setScoreOfTeamOne(request.getScoreTeam1());
+        game.setScoreOfTeamTwo(request.getScoreTeam2());
         return game;
 
     }

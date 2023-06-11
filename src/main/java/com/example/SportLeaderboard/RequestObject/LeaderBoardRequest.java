@@ -1,6 +1,5 @@
 package com.example.SportLeaderboard.RequestObject;
 
-import com.example.SportLeaderboard.Models.Game;
 import com.example.SportLeaderboard.Models.LeaderBoard;
 import lombok.Data;
 import lombok.Getter;
@@ -23,7 +22,7 @@ public class LeaderBoardRequest {
         LeaderBoard leaderBoard = new LeaderBoard();
         leaderBoard.setTeamName(request.getTeamName());
         leaderBoard.setWins(request.getWins());
-        leaderBoard.setLosses(request.getLosses());
+        leaderBoard.setTeamLosses(request.getLosses());
         leaderBoard.setCreateDate(new Date());
         leaderBoard.setIsActive(true);
         return leaderBoard;

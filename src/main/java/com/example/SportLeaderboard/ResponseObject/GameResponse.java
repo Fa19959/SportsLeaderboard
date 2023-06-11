@@ -1,7 +1,6 @@
 package com.example.SportLeaderboard.ResponseObject;
 
 import com.example.SportLeaderboard.Models.Game;
-import com.example.SportLeaderboard.Models.Team;
 import com.example.SportLeaderboard.RequestObject.TeamRequest;
 import lombok.Builder;
 import lombok.Data;
@@ -28,8 +27,8 @@ public class GameResponse {
                 .Id(requestFromGame.getGameId())
                 .Description(requestFromGame.getGameDescription())
                //.tRequest1(requestFromGame.)
-                .score1(requestFromGame.getScoreTeam1())
-                .score2(requestFromGame.getScoreTeam2())
+                .score1(requestFromGame.getScoreOfTeamOne())
+                .score2(requestFromGame.getScoreOfTeamTwo())
                 .build();
     }
 

@@ -19,9 +19,9 @@ public class GameService {
     public void createGame() {
         Game gameToCreate = new Game();
         gameToCreate.setGameDescription("This is game description");
-        gameToCreate.setScoreTeam1(1);
-        gameToCreate.setScoreTeam2(2);
-        gameToCreate.setTeam1(teamRepository.getTeamById(1));
+        gameToCreate.setScoreOfTeamOne(1);
+        gameToCreate.setScoreOfTeamTwo(2);
+        gameToCreate.setTeamOne(teamRepository.getTeamById(1));
         gameToCreate.setTeam2(teamRepository.getTeamById(2));
         gameToCreate.setCreateDate(new Date());
         gameToCreate.setIsActive(true);

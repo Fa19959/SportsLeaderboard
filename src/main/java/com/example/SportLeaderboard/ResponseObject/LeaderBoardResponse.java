@@ -1,6 +1,5 @@
 package com.example.SportLeaderboard.ResponseObject;
 
-import com.example.SportLeaderboard.Models.Game;
 import com.example.SportLeaderboard.Models.LeaderBoard;
 import lombok.Builder;
 import lombok.Data;
@@ -25,7 +24,7 @@ public class LeaderBoardResponse {
                 .Id(requestFromLeaderBoard.getLeaderBoardId())
                 .Name(requestFromLeaderBoard.getTeamName())
                 .wins(requestFromLeaderBoard.getWins())
-                .losses(requestFromLeaderBoard.getLosses())
+                .losses(requestFromLeaderBoard.getTeamLosses())
                 .build();
     }
 

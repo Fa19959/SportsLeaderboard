@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Data
 public class Team extends BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)    // To Genarate Primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)    // To Generate Primary key
     @Column(name = "id")
     Integer teamId;
     Integer wins;

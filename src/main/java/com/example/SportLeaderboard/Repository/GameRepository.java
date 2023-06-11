@@ -1,8 +1,6 @@
 package com.example.SportLeaderboard.Repository;
 
 import com.example.SportLeaderboard.Models.Game;
-import com.example.SportLeaderboard.Models.LeaderBoard;
-import com.example.SportLeaderboard.Models.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

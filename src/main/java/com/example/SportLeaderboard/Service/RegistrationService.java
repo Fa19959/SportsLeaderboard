@@ -1,16 +1,17 @@
 package com.example.SportLeaderboard.Service;
 
-import com.example.SportLeaderboard.Models.Game;
 import com.example.SportLeaderboard.Models.Registration;
 import com.example.SportLeaderboard.Repository.RegistrationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+
 @Service
 public class RegistrationService {
-@Autowired
+    @Autowired
     RegistrationRepository registrationRepository;
+
     public void RegisterTeam() {
         Registration register = new Registration();
         register.setTeamName("DRR");
@@ -21,7 +22,7 @@ public class RegistrationService {
         registrationRepository.save(register);
     }
 
-    public Registration getRegistrationById(Integer id){
+    public Registration getRegistrationById(Integer id) {
         Registration registerById = registrationRepository.getRegistrationId(id);
         return registerById;
 

@@ -14,7 +14,7 @@ public class TeamController {
     @Autowired
     TeamService teamService;
 
-    @RequestMapping(value = "RegisterNewTeam", method = RequestMethod.POST)                 //Register Player
+    @RequestMapping(value = "RegisterNewTeam", method = RequestMethod.POST)    //Register Player
     public void registerNewTeam() {
         teamService.createTeam();
     }

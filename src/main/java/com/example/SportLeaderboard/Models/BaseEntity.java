@@ -4,15 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
-
 import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
 @Getter
 @Setter
-@MappedSuperclass // main class inheritince
-// to make sure no reption of the code
-
+@MappedSuperclass // Main Class "InheritAnce", To Make sure That No repetition In The Code.
 public class BaseEntity {
     @CreatedDate
     Date createDate;

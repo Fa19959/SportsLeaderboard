@@ -6,8 +6,8 @@ import com.example.SportLeaderboard.Service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
-@RequestMapping(value = "Game")
+@RestController  //Marks The Class As a controller.
+@RequestMapping(value = "Game") //Map Incoming Requests to Specific Methods.
 public class GameController {
     @Autowired
     GameService gameService;

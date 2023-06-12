@@ -6,6 +6,7 @@ import com.example.SportLeaderboard.Repository.TeamRepository;
 import com.example.SportLeaderboard.RequestObject.GameRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.Date;
 import java.util.List;
 
@@ -49,11 +50,16 @@ public class GameService {
     public List<Game> getAllGamesByCreatedDate(String createdDate) {
         return gameRepository.getAllGamesByCreatedDate(createdDate);
     }
-    public List<Game> getAllActiveGames(){
+
+    public List<Game> getAllActiveGames() {
         return gameRepository.getAllActiveGames();
     }
 
     public List<Game> getAllInActiveGames() {
         return gameRepository.getAllInActiveGames();
+    }
+
+    public void deleteAllGames() {
+        gameRepository.deleteAllGame();
     }
 }

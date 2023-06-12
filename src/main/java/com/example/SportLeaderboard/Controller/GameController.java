@@ -58,4 +58,9 @@ public class GameController {
         List<GameResponse> gameResponseList = GameResponse.convertRequestListToResponseList(listOfGames);
         return gameResponseList;
     }
+
+    @RequestMapping(value = "deleteAllGame", method = RequestMethod.POST)
+    public void deleteAllGame() {
+        gameService.deleteAllGames();
+    }
 }

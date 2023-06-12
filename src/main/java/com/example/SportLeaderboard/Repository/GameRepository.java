@@ -15,12 +15,18 @@ public interface GameRepository extends JpaRepository<Game, Integer> {
 
     @Query("SELECT G FROM Game g")
     List<Game> getAllGames();
+
     @Query(value = "SELECT * FROM Game where created_Date Like concat (?1,%)", nativeQuery = true)
     List<Game> getAllGamesByCreatedDate(@Param("createdDate") String createdDate);
-//(?1,%) Filter the created_Date column,?1 represents the first parameter in the method (createdDate),and % matches any number of characters.
+
+    //(?1,%) Filter the created_Date column,?1 represents the first parameter in the method (createdDate),and % matches any number of characters.
     @Query("SELECT g FROM Game g where g.isActive = 1")
     List<Game> getAllActiveGames();
+
     @Query("SELECT g FROM Game g where g.isActive = 0")
     List<Game> getAllInActiveGames();
+
+    @Query(value = "UPDATE Game g Set g.isActive = false")
+    void deleteAllGame();
 
 }

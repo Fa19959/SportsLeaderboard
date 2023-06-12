@@ -32,7 +32,7 @@ public class GameService {
 
 
     public void createGameA(GameRequest gameRequest) {
-        Game game = gameRequest.convert(gameRequest);
+        Game game = gameRequest.convertToGameRequest(gameRequest);
         gameRepository.save(game);
     }
 

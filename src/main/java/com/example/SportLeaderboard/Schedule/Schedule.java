@@ -1,6 +1,5 @@
 package com.example.SportLeaderboard.Schedule;
 
-import com.example.SportLeaderboard.Models.Game;
 import com.example.SportLeaderboard.Repository.GameRepository;
 import com.example.SportLeaderboard.Repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;

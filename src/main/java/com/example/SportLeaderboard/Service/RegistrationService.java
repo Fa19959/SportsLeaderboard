@@ -2,6 +2,7 @@ package com.example.SportLeaderboard.Service;
 
 import com.example.SportLeaderboard.Models.Registration;
 import com.example.SportLeaderboard.Repository.RegistrationRepository;
+import com.example.SportLeaderboard.RequestObject.RegistrationRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +13,12 @@ public class RegistrationService {
     @Autowired
     RegistrationRepository registrationRepository;
 
-    public void RegisterTeam() {
+    public void RegisterTeam(RegistrationRequest registrationRequest) {
         Registration register = new Registration();
-        register.setTeamName("DRR");
-        register.setPassword("12334");
-        register.setSportType("football");
+        register.setUserName(registrationRequest.getUserName());
+        register.setTeamName(registrationRequest.getTeamName());
+        register.setPassword(registrationRequest.getPassword());
+        register.setSportType(registrationRequest.getSportType());
         register.setCreateDate(new Date());
         register.setIsActive(true);
         registrationRepository.save(register);

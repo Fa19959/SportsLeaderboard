@@ -15,7 +15,7 @@ public class RegistrationController {
 
     @RequestMapping(value = "RegisterTeam", method = RequestMethod.POST)
     public void registerTeam(@RequestBody  RegistrationRequest registrationRequest) {
-        registrationService.RegisterTeam();
+        registrationService.RegisterTeam(registrationRequest);
     }
 
     @RequestMapping(value = "getRegisterById", method = RequestMethod.GET)

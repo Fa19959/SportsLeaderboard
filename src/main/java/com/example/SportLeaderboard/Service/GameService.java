@@ -52,4 +52,8 @@ public class GameService {
     public List<Game> getAllActiveGames(){
         return gameRepository.getAllActiveGames();
     }
+
+    public List<Game> getAllInActiveGames() {
+        return gameRepository.getAllInActiveGames();
+    }
 }

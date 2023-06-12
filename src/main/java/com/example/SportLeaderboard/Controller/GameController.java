@@ -51,4 +51,11 @@ public class GameController {
         List<GameResponse> gameResponseList = GameResponse.convertRequestListToResponseList(listOfGames);
         return gameResponseList;
     }
+
+    @RequestMapping(value = "getAllInActiveGames", method = RequestMethod.GET)
+    public List<GameResponse> getAllInActiveGames() {
+        List<Game> listOfGames = gameService.getAllInActiveGames();
+        List<GameResponse> gameResponseList = GameResponse.convertRequestListToResponseList(listOfGames);
+        return gameResponseList;
+    }
 }

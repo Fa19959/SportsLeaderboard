@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class LeaderBoardService {
@@ -26,6 +27,10 @@ public class LeaderBoardService {
         LeaderBoard leaderBoardById = leaderBoardRepository.getLeaderBoardById(id);
         return leaderBoardById;
     }
+     public List <LeaderBoard> getLeaderBoardOrderByWins(){
+        List<LeaderBoard> leaderBoardOrderByWins = leaderBoardRepository.getLeaderBoardOrderByWins();
+        return leaderBoardOrderByWins;
+     }
 
 
 }

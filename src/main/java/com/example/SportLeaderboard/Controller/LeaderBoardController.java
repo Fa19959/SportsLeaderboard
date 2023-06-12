@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(value = "LeaderBoard")
 public class LeaderBoardController {
@@ -17,6 +19,10 @@ public class LeaderBoardController {
     @RequestMapping(value = "createLeaderBoard", method = RequestMethod.POST)
     public void createLeaderBoard() {
         leaderBoardService.createLeaderBoard();
+    }
+    @RequestMapping(value = "retrieveCurrentStandings", method = RequestMethod.POST)
+    public List<LeaderBoard> getLeaderBoardOrderByWins() {
+        return leaderBoardService.getLeaderBoardOrderByWins();
     }
 
     @RequestMapping(value = "getLeaderBoardById", method = RequestMethod.GET)

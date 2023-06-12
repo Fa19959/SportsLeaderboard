@@ -24,8 +24,8 @@ public class GameResponse {
 
     public static GameResponse covertToResponse(Game requestFromGame) {
         return GameResponse.builder()
-                .Id(requestFromGame.getGameId())
-                .Description(requestFromGame.getGameDescription())
+                .Id(requestFromGame.getId())
+                .Description(requestFromGame.getDescription())
                 //.tRequest1(requestFromGame.)
                 .score1(requestFromGame.getScoreOfTeamOne())
                 .score2(requestFromGame.getScoreOfTeamTwo())

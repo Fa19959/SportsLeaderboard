@@ -19,11 +19,11 @@ public class GameService {
 
     public void createGame() {
         Game gameToCreate = new Game();
-        gameToCreate.setGameDescription("This is game description");
+        gameToCreate.setDescription("This is game description");
         gameToCreate.setScoreOfTeamOne(1);
         gameToCreate.setScoreOfTeamTwo(2);
         gameToCreate.setTeamOne(teamRepository.getTeamById(1));
-        gameToCreate.setTeam2(teamRepository.getTeamById(2));
+        gameToCreate.setTeamTwo(teamRepository.getTeamById(2));
         gameToCreate.setCreateDate(new Date());
         gameToCreate.setIsActive(true);
         gameRepository.save(gameToCreate);
@@ -42,7 +42,6 @@ public class GameService {
         return gameById;
 
     }
-
     public List<Game> getAllGames() {
         return gameRepository.getAllGames();
     }

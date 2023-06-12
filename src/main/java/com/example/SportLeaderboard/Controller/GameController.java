@@ -15,10 +15,10 @@ public class GameController {
     @Autowired
     GameService gameService;
 
-    @RequestMapping(value = "createGame", method = RequestMethod.POST)
-    public void createGame() {
-        gameService.createGame();
-    }
+//    @RequestMapping(value = "createGame", method = RequestMethod.POST)
+//    public void createGame() {
+//        gameService.createGame();
+//    }
 
     @RequestMapping(value = "createGame", method = RequestMethod.POST)
     public void createGameA(@RequestBody GameRequest gameRequest) {

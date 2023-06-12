@@ -22,7 +22,7 @@ public class PlayerResponse {
     public static PlayerResponse covertPlayerToResponse(Player requestFromPlayer) {
         return PlayerResponse.builder()
                 .Id(requestFromPlayer.getPlayerId())
-                .Name(requestFromPlayer.getPlayerName())
+                .Name(requestFromPlayer.getName())
                 .tName(requestFromPlayer.getTeamName())
                 .sport(requestFromPlayer.getSport())
                 .build();

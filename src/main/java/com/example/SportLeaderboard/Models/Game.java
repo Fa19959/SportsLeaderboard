@@ -15,14 +15,14 @@ public class Game extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Integer gameId;
-    String gameDescription;
+    Integer id;
+    String description;
     @OneToOne
     @JoinColumn(name = "team1_id", referencedColumnName = "id")
     Team teamOne;
     @OneToOne
     @JoinColumn(name = "team2_id", referencedColumnName = "id")
-    Team team2;
+    Team teamTwo;
 
     Integer scoreOfTeamOne;
     Integer scoreOfTeamTwo;

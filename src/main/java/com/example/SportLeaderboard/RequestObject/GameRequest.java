@@ -21,9 +21,9 @@ public class GameRequest {
 
     public static Game convertToGameRequest(GameRequest request) {
         Game game = new Game();
-        game.setGameDescription(request.getGameDescription());
+        game.setDescription(request.getGameDescription());
         game.setTeamOne(TeamRequest.convertToTeamRequest(request.getTeamRequest1()));
-        game.setTeam2(TeamRequest.convertToTeamRequest(request.getTeamRequest2()));
+        game.setTeamTwo(TeamRequest.convertToTeamRequest(request.getTeamRequest2()));
         game.setScoreOfTeamOne(request.getScoreTeam1());
         game.setScoreOfTeamTwo(request.getScoreTeam2());
         return game;

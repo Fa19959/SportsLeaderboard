@@ -19,7 +19,7 @@ public class PlayerRequest {
 
     public static Player covertPlayerToRequest(PlayerRequest request) {
         Player player = new Player();
-        player.setPlayerName(request.getPlayerName());
+        player.setName(request.getPlayerName());
         player.setTeamName(request.getTeamName());
         player.setSport(request.getSport());
         return player;

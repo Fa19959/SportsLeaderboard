@@ -13,7 +13,7 @@ public interface GameRepository extends JpaRepository<Game, Integer> {
     @Query(value = "SELECT g FROM Game g where g.id= :id")
     Game getGameById(@Param("id") Integer id);
 
-    @Query("SELECT G FROM Game g")
+    @Query("SELECT g FROM Game g")
     List<Game> getAllGames();
 
     @Query(value = "SELECT * FROM Game where created_Date Like concat (?1,%)", nativeQuery = true)
@@ -28,5 +28,4 @@ public interface GameRepository extends JpaRepository<Game, Integer> {
 
     @Query(value = "UPDATE Game g Set g.isActive = false")
     void deleteAllGame();
-
 }

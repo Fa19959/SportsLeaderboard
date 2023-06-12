@@ -15,7 +15,7 @@ public class LeaderBoardService {
     public void createLeaderBoard() {
         LeaderBoard leaderBoard = new LeaderBoard();
         leaderBoard.setTeamName("RDF");
-        leaderBoard.setWins(1);
+        leaderBoard.setTeamWins(1);
         leaderBoard.setTeamLosses(0);
         leaderBoard.setCreateDate(new Date());
         leaderBoard.setIsActive(true);
@@ -26,4 +26,6 @@ public class LeaderBoardService {
         LeaderBoard leaderBoardById = leaderBoardRepository.getLeaderBoardById(id);
         return leaderBoardById;
     }
+
+
 }

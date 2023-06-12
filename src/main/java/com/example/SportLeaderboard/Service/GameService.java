@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class GameService {
@@ -40,5 +41,12 @@ public class GameService {
         Game gameById = gameRepository.getGameById(id);
         return gameById;
 
+    }
+
+    public List<Game> getAllGames() {
+        return gameRepository.getAllGames();
+    }
+    public List<Game> getAllGamesByCreatedDate(String createdDate) {
+        return gameRepository.getAllGamesByCreatedDate(createdDate);
     }
 }

@@ -30,15 +30,24 @@ public class GameController {
         Game gameById = gameService.getGameById(id);
         return gameById;
     }
+
     @RequestMapping(value = "getAllGames", method = RequestMethod.GET)
     public List<GameResponse> getAllGames() {
         List<Game> listOfGames = gameService.getAllGames();
-        List<GameResponse> customerResponseList = GameResponse.convertRequestListToResponseList(listOfGames);
-        return customerResponseList;
+        List<GameResponse> gameResponseList = GameResponse.convertRequestListToResponseList(listOfGames);
+        return gameResponseList;
     }
+
     @RequestMapping(value = "getAllGamesByCreatedDate", method = RequestMethod.GET)
     public List<GameResponse> getAllGamesByCreatedDate(@RequestParam String createdDate) {
         List<Game> listOfGames = gameService.getAllGamesByCreatedDate(createdDate);
+        List<GameResponse> gameResponseList = GameResponse.convertRequestListToResponseList(listOfGames);
+        return gameResponseList;
+    }
+
+    @RequestMapping(value = "getAllActiveGames", method = RequestMethod.GET)
+    public List<GameResponse> getAllActiveGames() {
+        List<Game> listOfGames = gameService.getAllActiveGames();
         List<GameResponse> gameResponseList = GameResponse.convertRequestListToResponseList(listOfGames);
         return gameResponseList;
     }

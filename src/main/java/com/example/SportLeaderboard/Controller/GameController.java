@@ -63,4 +63,9 @@ public class GameController {
     public void deleteAllGame() {
         gameService.deleteAllGames();
     }
+
+    @RequestMapping(value = "updateGame", method = RequestMethod.POST)
+    public void updateGame(@RequestBody GameRequest gameRequest) {
+        gameService.updateGame(gameRequest);
+    }
 }

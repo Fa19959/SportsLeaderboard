@@ -1,7 +1,6 @@
 package com.example.SportLeaderboard.ResponseObject;
 
 import com.example.SportLeaderboard.Models.Game;
-import com.example.SportLeaderboard.RequestObject.TeamRequest;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
@@ -17,8 +16,8 @@ import java.util.List;
 public class GameResponse {
     Integer Id;
     String Description;
-    TeamRequest tRequest1;
-    TeamRequest tRequest2;
+    TeamResponse teamOneResponse;
+    TeamResponse teamTwoResponse;
     Integer score1;
     Integer score2;
 
@@ -26,7 +25,8 @@ public class GameResponse {
         return GameResponse.builder()
                 .Id(requestFromGame.getId())
                 .Description(requestFromGame.getDescription())
-                //.tRequest1(requestFromGame.)
+                .teamOneResponse(TeamResponse.covertTeamToResponse(requestFromGame.getTeamOne()))
+                .teamTwoResponse(TeamResponse.covertTeamToResponse(requestFromGame.getTeamTwo()))
                 .score1(requestFromGame.getScoreOfTeamOne())
                 .score2(requestFromGame.getScoreOfTeamTwo())
                 .build();

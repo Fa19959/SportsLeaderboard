@@ -61,4 +61,12 @@ public class GameService {
     public void deleteAllGames() {
         gameRepository.deleteAllGame();
     }
+    public void updateGame(GameRequest gameRequest) {
+        Game game = gameRepository.getGameById(gameRequest.getGameId());
+        game.setDescription(gameRequest.getGameDescription());
+        game.setScoreOfTeamOne(gameRequest.getScoreTeam1());
+        game.setScoreOfTeamTwo(gameRequest.getScoreTeam2());
+        game.setUpdateDate(new Date());
+        gameRepository.save(game);
+    }
 }

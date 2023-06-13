@@ -28,4 +28,6 @@ public interface GameRepository extends JpaRepository<Game, Integer> {
 
     @Query(value = "UPDATE Game g Set g.isActive = false")
     void deleteAllGame();
+
+
 }

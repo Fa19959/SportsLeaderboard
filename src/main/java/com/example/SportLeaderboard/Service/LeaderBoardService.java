@@ -2,6 +2,7 @@ package com.example.SportLeaderboard.Service;
 
 import com.example.SportLeaderboard.Models.LeaderBoard;
 import com.example.SportLeaderboard.Repository.LeaderBoardRepository;
+import com.example.SportLeaderboard.RequestObject.LeaderBoardRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +14,11 @@ public class LeaderBoardService {
     @Autowired
     LeaderBoardRepository leaderBoardRepository;
 
-    public void createLeaderBoard() {
+    public void createLeaderBoard(LeaderBoardRequest leaderBoardRequest) {
         LeaderBoard leaderBoard = new LeaderBoard();
-        leaderBoard.setTeamName("RDF");
-        leaderBoard.setTeamWins(1);
-        leaderBoard.setTeamLosses(0);
+        leaderBoard.setTeamName(leaderBoardRequest.getTeamName());
+        leaderBoard.setTeamWins(leaderBoardRequest.getWins());
+        leaderBoard.setTeamLosses(leaderBoardRequest.getLosses());
         leaderBoard.setCreateDate(new Date());
         leaderBoard.setIsActive(true);
         leaderBoardRepository.save(leaderBoard);

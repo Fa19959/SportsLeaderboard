@@ -1,6 +1,7 @@
 package com.example.SportLeaderboard.Controller;
 
 import com.example.SportLeaderboard.Models.LeaderBoard;
+import com.example.SportLeaderboard.RequestObject.LeaderBoardRequest;
 import com.example.SportLeaderboard.Service.LeaderBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +18,8 @@ public class LeaderBoardController {
     LeaderBoardService leaderBoardService;
 
     @RequestMapping(value = "createLeaderBoard", method = RequestMethod.POST)
-    public void createLeaderBoard() {
-        leaderBoardService.createLeaderBoard();
+    public void createLeaderBoard(@RequestParam LeaderBoardRequest leaderBoardRequest) {
+        leaderBoardService.createLeaderBoard(leaderBoardRequest);
     }
     @RequestMapping(value = "retrieveCurrentStandings", method = RequestMethod.POST)
     public List<LeaderBoard> getLeaderBoardOrderByWins() {

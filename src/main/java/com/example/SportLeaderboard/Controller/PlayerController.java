@@ -6,6 +6,7 @@ import com.example.SportLeaderboard.Service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 
 @RestController
@@ -32,8 +33,8 @@ public class PlayerController {
         return playerList;
     }
 
-//    @RequestMapping(value = "updatePlayer")
-//    public void updatePlayer(@RequestBody PlayerRequest playerRequest) throws ParseException {
-//        playerService.updatePlayer(playerRequest);
-//    }
+    @RequestMapping(value = "updatePlayer")
+    public void updatePlayer(@RequestBody PlayerRequest playerRequest) throws ParseException {
+        playerService.updatePlayer(playerRequest);
+    }
 }

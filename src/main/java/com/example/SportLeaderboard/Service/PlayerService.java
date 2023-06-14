@@ -29,18 +29,18 @@ public class PlayerService {
         playerRepository.save(player);
     }
 
-//    public void updatePlayer(PlayerRequest playerRequest) {
-//
-//        Player player = new Player();
-//        player.setPlayerId(playerRequest.getPlayerId());
-//        player.setTeamName(playerRequest.getTeamName());
-//        player.setSport(playerRequest.getSport());
-//        player.setCreateDate(new Date());
-//        player.setUpdateDate(new Date());
-//        player.setIsActive(Boolean.TRUE);
-//        playerRepository.save(player);
-//
-//    }
+    public void updatePlayer(PlayerRequest playerRequest) {
+
+        Player player = new Player();
+        player.setPlayerId(playerRequest.getPlayerId());
+        player.setTeamName(playerRequest.getTeamName());
+        player.setSport(playerRequest.getSport());
+        player.setCreateDate(new Date());
+        player.setUpdateDate(new Date());
+        player.setIsActive(Boolean.TRUE);
+        playerRepository.save(player);
+
+    }
 
     public Player getPlayerById(Integer id) {
         Player player = playerRepository.getPlayerId(id);
@@ -52,9 +52,5 @@ public class PlayerService {
         return playerRepository.getAllPlayer();
     }
 
-//    public void registerPlayers(PlayerRequest playerRequest) {
-//        Player player = playerRequest.covertPlayerToRequest(playerRequest);
-//        playerRepository.save(player);
-//    }
 
 }

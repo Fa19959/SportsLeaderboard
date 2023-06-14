@@ -31,12 +31,12 @@ public class GameService {
 //
 //    }
 
-
+ // Create new Game
     public void createGameA(GameRequest gameRequest) {
         Game game = gameRequest.convertToGameRequest(gameRequest);
         gameRepository.save(game);
     }
-
+//Get game by id
     public Game getGameById(Integer id) {
         Game gameById = gameRepository.getGameById(id);
         return gameById;
@@ -69,4 +69,5 @@ public class GameService {
         game.setUpdateDate(new Date());
         gameRepository.save(game);
     }
+   
 }

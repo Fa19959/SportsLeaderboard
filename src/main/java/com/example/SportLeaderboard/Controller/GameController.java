@@ -21,12 +21,19 @@ public class GameController {
 //    }
 
     @RequestMapping(value = "createGame", method = RequestMethod.POST)
-    public void createGameA(@RequestBody GameRequest gameRequest) {
-        gameService.createGameA(gameRequest);
+    public String createGameA(@RequestBody GameRequest gameRequest) {
+        try {
+            gameService.createGameA(gameRequest);
+            return "game created";
+        } catch (Exception e){
+            return "game Failed";
+        }
+
     }
 
     @RequestMapping(value = "getGameById", method = RequestMethod.GET)
     public Game getGameById(@RequestParam Integer id) {
+
         Game gameById = gameService.getGameById(id);
         return gameById;
     }

@@ -28,10 +28,11 @@ public class LeaderBoardService {
         LeaderBoard leaderBoardById = leaderBoardRepository.getLeaderBoardById(id);
         return leaderBoardById;
     }
-     public List <LeaderBoard> getLeaderBoardOrderByWins(){
+
+    public List<LeaderBoard> getLeaderBoardOrderByWins() {
         List<LeaderBoard> leaderBoardOrderByWins = leaderBoardRepository.getLeaderBoardOrderByWins();
         return leaderBoardOrderByWins;
-     }
+    }
 
 
 }

@@ -1,6 +1,5 @@
 package com.example.SportLeaderboard.ResponseObject;
 
-import com.example.SportLeaderboard.Models.Player;
 import com.example.SportLeaderboard.Models.Registration;
 import lombok.Builder;
 import lombok.Data;

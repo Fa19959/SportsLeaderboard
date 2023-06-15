@@ -31,17 +31,19 @@ public class GameService {
 //
 //    }
 
- // Create new Game
+    // Create new Game
     public void createGameA(GameRequest gameRequest) {
         Game game = gameRequest.convertToGameRequest(gameRequest);
         gameRepository.save(game);
     }
-//Get game by id
+
+    //Get game by id
     public Game getGameById(Integer id) {
         Game gameById = gameRepository.getGameById(id);
         return gameById;
 
     }
+
     public List<Game> getAllGames() {
         return gameRepository.getAllGames();
     }
@@ -61,6 +63,7 @@ public class GameService {
     public void deleteAllGames() {
         gameRepository.deleteAllGame();
     }
+
     public void updateGame(GameRequest gameRequest) {
         Game game = gameRepository.getGameById(gameRequest.getGameId());
         game.setDescription(gameRequest.getGameDescription());

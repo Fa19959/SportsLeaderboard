@@ -25,7 +25,7 @@ public class GameController {
         try {
             gameService.createGameA(gameRequest);
             return "game created";
-        } catch (Exception e){
+        } catch (Exception e) {
             return "game Failed";
         }
 

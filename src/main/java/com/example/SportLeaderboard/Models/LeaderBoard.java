@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Data
 public class LeaderBoard extends BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

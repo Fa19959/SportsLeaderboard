@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TeamRepository extends JpaRepository<Team,Integer> {
+public interface TeamRepository extends JpaRepository<Team, Integer> {
     @Query(value = "select t from Team t where t.id=:teamId")
     public Team getTeamById(@Param("teamId") Integer id);
 }

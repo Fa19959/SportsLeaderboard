@@ -18,6 +18,7 @@ public class LeaderBoardResponse {
     String Name;
     Integer wins;
     Integer losses;
+
     //builder(),Method is called to obtain the builder instance for the LeaderBoardResponse class.
     public static LeaderBoardResponse covertLeaderBoardToResponse(LeaderBoard requestFromLeaderBoard) {
         return LeaderBoardResponse.builder()

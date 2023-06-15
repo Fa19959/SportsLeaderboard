@@ -21,6 +21,7 @@ public class LeaderBoardController {
     public void createLeaderBoard(@RequestParam LeaderBoardRequest leaderBoardRequest) {
         leaderBoardService.createLeaderBoard(leaderBoardRequest);
     }
+
     @RequestMapping(value = "retrieveCurrentStandings", method = RequestMethod.POST)
     public List<LeaderBoard> getLeaderBoardOrderByWins() {
         return leaderBoardService.getLeaderBoardOrderByWins();

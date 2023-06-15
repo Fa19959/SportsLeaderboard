@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-@MappedSuperclass // Main Class "InheritAnce", To Make sure That No repetition In The Code.
+@MappedSuperclass // Main Class "Inheritance", To Make sure That No repetition In The Code.
 public class BaseEntity {
     @CreatedDate
     Date createDate;

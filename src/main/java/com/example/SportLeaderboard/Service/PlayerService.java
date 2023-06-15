@@ -49,6 +49,7 @@ public class PlayerService {
     }
 
     public List<Player> getAllPlayers() {
+
         return playerRepository.getAllPlayer();
     }
 

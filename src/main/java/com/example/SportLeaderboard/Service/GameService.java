@@ -70,13 +70,13 @@ public class GameService {
         gameRepository.save(game);
     }
     //update the information about Game
-    public Game updateGame(Integer id, Game updateData) {
-        Game game = gameRepository.findById(id).orElse(null);
-        if (game!= null) {
-            game.setDescription(updateData.getDescription());
-            game.setScoreOfTeamOne(updateData.getScoreOfTeamOne());
-            return gameRepository.save(game);
-        }
-        return null;
-    }
+//    public Game updateGame(Integer id, Game updateData) {
+//        Game game = gameRepository.findById(id).orElse(null);
+//        if (game!= null) {
+//            game.setDescription(updateData.getDescription());
+//            game.setScoreOfTeamOne(updateData.getScoreOfTeamOne());
+//            return gameRepository.save(game);
+//        }
+//        return null;
+//    }
 }

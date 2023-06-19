@@ -22,9 +22,9 @@ public class LeaderBoardController {
 
         try {
             leaderBoardService.createLeaderBoard(leaderBoardRequest);
-            return "LeaderBoard created";
+            return "Leaderboard created successfully";
         }catch (Exception e) {
-            return "LeaderBoard Failed";
+            return "Failed !!!";
         }
     }
 

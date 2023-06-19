@@ -18,8 +18,14 @@ public class LeaderBoardController {
     LeaderBoardService leaderBoardService;
 
     @RequestMapping(value = "createLeaderBoard", method = RequestMethod.POST)
-    public void createLeaderBoard(@RequestParam LeaderBoardRequest leaderBoardRequest) {
-        leaderBoardService.createLeaderBoard(leaderBoardRequest);
+    public String createLeaderBoard(@RequestParam LeaderBoardRequest leaderBoardRequest) {
+
+        try {
+            leaderBoardService.createLeaderBoard(leaderBoardRequest);
+            return "LeaderBoard created";
+        }catch (Exception e) {
+            return "LeaderBoard Failed";
+        }
     }
 
     @RequestMapping(value = "retrieveCurrentStandings", method = RequestMethod.POST)

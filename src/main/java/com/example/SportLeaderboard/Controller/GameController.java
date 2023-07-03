@@ -1,14 +1,15 @@
 package com.example.SportLeaderboard.Controller;
-
+//This imports the Game class from the com.example.SportLeaderboard.Models package.
+// The Game class likely represents a specific game or match in the sport leaderboard system.
 import com.example.SportLeaderboard.Models.Game;
 import com.example.SportLeaderboard.RequestObject.GameRequest;
 import com.example.SportLeaderboard.ResponseObject.GameResponse;
 import com.example.SportLeaderboard.Service.GameService;
+//This imports the Autowired annotation from the org.springframework.beans.factory.annotation package.
+// The Autowired annotation is used for automatic dependency injection in Spring Framework applications.
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-
 @RestController  //Marks The Class As a controller.
 @RequestMapping(value = "Game") //Map Incoming Requests to Specific Methods.
 public class GameController {
